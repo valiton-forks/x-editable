@@ -59,11 +59,8 @@ function getFiles() {
         },  
         jquery: {
             form: [],
-            container: [containers+'editable-poshytip.js'],
-            inputs: [
-               inputs+'dateui/dateui.js',
-               inputs+'dateui/dateuifield.js'
-            ],            
+            container: [],
+            inputs: [],            
             css: []
         }      
     };
@@ -80,11 +77,7 @@ function getFiles() {
         inputs+'text.js',
         inputs+'textarea.js',
         inputs+'select.js',    
-        inputs+'checklist.js',
-        inputs+'html5types.js',
-        inputs+'select2/select2.js',
-        inputs+'combodate/lib/combodate.js', 
-        inputs+'combodate/combodate.js'    
+        inputs+'checklist.js'
     ]; 
 
     //common css files
@@ -102,7 +95,7 @@ function getFiles() {
         
         //js
         task = k+'_js';
-        dest = folder+'js/'+prefix+'-editable'+ (k === 'jquery' ? '-poshytip' : '');
+        dest = folder+'js/'+prefix+'-editable';
         concat_files[task] = {
             src:  js.concat(config[k].form).concat(config[k].container).concat(config[k].inputs),
             dest: dest+'.js'
